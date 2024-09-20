@@ -35,7 +35,7 @@ export default async function Component({ searchParams }: ComponentPros) {
     },
   );
   const orders = response.data.data;
-  let links: { url: string; label: string; active: boolean }[] =
+  let links: { url: string; label: string; active: boolean; id: number }[] =
     response.data.meta.links;
   links = links.map((link, index) => ({ ...link, id: index }));
   return (
